@@ -25,3 +25,5 @@ exclude:
   - .git
   - subdocs
   - CHANGELOG.yml
+
+theme: jekyll-theme-minimal
