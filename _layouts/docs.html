@@ -9,11 +9,11 @@
 	  <div class="sidebar-nav">
             <div class="navbar navbar-expand-lg navbar-light flex-row flex-lg-column align-items-start">
               <div class="navbar-header">
-                <a href="{{ site.baseurl }}/docs.html" class="navbar-brand">Documentation</a>
+                <a href="{{ site.baseurl }}/docs.html" class="navbar-brand">Documentação</a>
               </div>
               <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".sidebar-navbar-collapse" aria-expanded="false" aria-controls="docsSidebar" aria-label="Documentation Navigation">
                 <span class="navbar-toggler-icon"></span>
-                <span class="sr-only">Documentation Navigation</span>
+                <span class="sr-only">Navegação da Documentação</span>
               </button>
               <div class="collapse navbar-collapse sidebar-navbar-collapse" id="docsSidebar">
                 <ul class="flex-column navbar-nav w-100 justify-content-between">
@@ -29,9 +29,9 @@
 	<div class="col-lg-9">
 	  <header>
             {%- if page.path == '_docs/changelog.md' %}
-            <a style="float: right" target="_blank" href="{{site.github.repository_url}}/blob/master/CHANGELOG.md">Edit this page on GitHub <i class="fab fa-github-alt"></i></a>
+            <a style="float: right" target="_blank" href="{{site.github.repository_url}}/blob/master/CHANGELOG.md">Edite esta página no GitHub <i class="fab fa-github-alt"></i></a>
             {%- else %}
-            <a style="float: right" target="_blank" href="{{site.github.repository_url}}/blob/gh-pages/{{page.path}}">Edit this page on GitHub <i class="fab fa-github-alt"></i></a>
+            <a style="float: right" target="_blank" href="{{site.github.repository_url}}/blob/gh-pages/{{page.path}}">Edite esta página no GitHub <i class="fab fa-github-alt"></i></a>
             {%- endif %}
 	    <h1 class="page-header">{{ page.title }}</h1>
 	  </header>
