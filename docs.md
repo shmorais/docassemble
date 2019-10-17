@@ -6,10 +6,10 @@ order: 20
 ---
 
 **docassemble** é uma plataforma para criação de aplicações web
-mobile-friendly chamadas [Interviews] (Entrevistas). Estas perguntam
+mobile-friendly chamadas [Entrevistas]. Estas perguntam
 uma questão de cada vez de até atingirem seu objetivo. O objetivo
 pode ser a apresentação de um parecer, a criação de um documento 
-assinado, o envio de um cadastro, ou outra coisa. Execute a [Demonstration] 
+assinado, o envio de um cadastro, ou outra coisa. Execute a [Demonstração] 
 (Demonstração) para ter uma ideia de como aplicações **docassemble** são.
 
 Você pode executar **docassemble** na sua máquina, mas a maior parte 
@@ -18,8 +18,8 @@ das pessoas executa "na nuvem", em serviços de hospedagem como
 descreve uma variedade de formas pelas quais você pode ter a sua
 própria instância do  **docassemble** funcionando. VocÊ pode instalar
 **docassemble** num servidor usando [Docker] ou, se for um expert, seguir
-as instruções detalhadas de [Installation]. Na maioria dos casos, a 
-[Administration] e [Configuration] do **docassemble** podem ser gerenciados
+as instruções detalhadas de [Instalação]. Na maioria dos casos, a 
+[Administração] e [Configuração] do **docassemble** podem ser gerenciados
 pela interface web.
 
 # <a name="intro"></a>Introdução ao **docassemble**
@@ -55,15 +55,15 @@ nomes de [Special Variables] que possuem seu valor pré definido.
 **docassemble** suporta [many different types] de variáveis -- mesmo
 [file uploads] e [touchscreen signatures]. Uma das características mais 
 poderosas é a habilidade de armazenar informações numa forma estruturada
-usando [Objects]. Quando você quer coletar um ou mais pedações de informações
-relacionadas, você pode fazê-lo em [Groups] tais como [lists] e [dictionaries].
+usando [Objetos]. Quando você quer coletar um ou mais pedações de informações
+relacionadas, você pode fazê-lo em [Grupos] tais como [listas] e [dicionários].
 
 Existem outros tipos de blocos além de blocos de [`question`].
 
-[Initial Blocks] definem opções para toda a entrevista, tais como 
-[features] especiais do questionário ou as [screen parts] padrão.
+[Blocos Iniciais] definem opções para toda a entrevista, tais como 
+[funcionalidades] especiais do questionário ou as [screen parts] padrão.
 
-Blocos de [Code] permitem que variáveis sejam definidas mediante computação.
+Blocos de [Código] permitem que variáveis sejam definidas mediante computação.
 O código é escrito em [Python]. Para escrever uma entrevista, você não precisa
 de saber muito sobre [Python], além de como escrever instruções "if/then/else".
 
@@ -73,106 +73,112 @@ code: |
     foro_competente = True
 {% endhighlight %}
 
-VocÊ pode mesmo usar lógica fuzzy com a funcionalidade de [Machine
+Você pode mesmo usar lógica fuzzy com a funcionalidade de [Machine
 Learning] do **docassemble**.
 
 **docassemble** decide quais questões fazer, e a ordem na qual eles são
-feitas, de acordo com a [Interview Logic]. Você pode especificar a ordem
+feitas, de acordo com a [Lógica da Entrevista]. Você pode especificar a ordem
 das questões com grande detalhamento se quiser, ou pode apenas definir 
 o objetivo final e deixar o **docassemble** descobrir a melhor ordem de
 execução.
 
-Um uso popular das entrevistas é a montagem de [Documents], daí o nome
+Um uso popular das entrevistas é a montagem de [Documentos], daí o nome
 **docassemble** - document + assembly (montagem).  Você pode redigir templates
 de documentos em [DOCX] ou [PDF]. Você também pode escrever documentos do mesmo
 modo que escreve questões, em texto puro usando [Markup] para indicar formatação.
 
 Na medida em que suas entrevistas se tornam mais sofisticadas, você vai achar
-útil invocar [Functions] para fazer coisas tais como conjugar verbos, computar
-diferenças entre datas, ou oferecer ao usuário links que realizam [actions] especiais.
+útil invocar [Funções] para fazer coisas tais como conjugar verbos, computar
+diferenças entre datas, ou oferecer ao usuário links que realizam [ações] especiais.
 
 **docassemble** possui um sistema de [User Login] que permite usuários criarem
 contas, salvarem suas respostas e reiniciarem suas entrevistas posteriormente.
 
-Since **docassemble** is a free and open-source application, it is
-designed to be interoperable with other applications.  There are a
-variety of ways to work with [External Data]; you can move information
-easily into and out of a **docassemble** interview session.  There is
-also a full-featured [API] for interacting with **docassemble**
-programmatically.  You can also design your own [Custom Front Ends].
+Como **docassemble** é uma aplicação livre e em código aberto, ela foi 
+projetada para ser interoperável com outras aplicações.
+Existem várias formas de se trabalhar com [Dados Externos]; você pode
+facilmente movimentar informação para dentro ou para fora do de uma seção
+de entrevista **docassemble**. Também existe uma completa [API] para interação
+com o **docassemble** programaticamente. Você pode também desenvolver seu próprio
+[Front End Customizado].
 
-Developers can prototype and test their interviews in the browser, using
-the interview developers' [Playground].
+Desenvolvedores podem prototipar e testar suas entrevistas no navegador, usando
+o [Playground] para desenvolvedores.
 
-Once you get a **docassemble** server [up and running], go through the
-[Hello World] tutorial to learn more about how interviews work.  As
-you become more experienced using the system, you may want to explore
-using other [Development Workflows] than just the [Playground].
+Assim que você obtiver seu servidor **docassemble** [em execução], percorra o
+tutorial [Olá, Mundo!] para aprender os primeiros passos de como funcionam as
+entrevistas. Na medida em que você adquirir mais experiência, você deve explorar
+outros [Fluxos de Desenvolvimento] diferentes do [Playground].
 
-One of **docassemble**'s most powerful features is its ability to
-operate multi-user interviews through the [Roles] feature.  For
-example, a user could fill out an interview and then an attorney could
-enter the interview to evaluate the information and provide legal
-advice, which the user would see the next time they log in.
+Uma das funcionalidades mais poderosas do **docassemble** é sua capacidade de 
+executar entrevistas multi-usuário por meio de sua funcinonalidade de [Papéis].
+Por exemplo, um usuário poderia preencher uma entrevista e um advogado poderia
+acessá-la para avaliar a informação e fornecer aconselhamento jurídico, que 
+o usuário veria da próxima vez que acessasse o sistema.
 
-Using the [Background Tasks] features, you can have your interviews do
-things on the server at times other than times when the user presses a
-button to advance to a new page.  Time-intensive tasks can run in the
-[background].  The interview can [evaluate user input] before the user
-submits it.  Interviews can do things [when the user is not logged
-in], like send a reminder [e-mail] to a user about a deadline as the date
-approaches.
+A funcionalidade de [Tarefas em Background] você pode programar que a entrevista
+realize tarefas no servidor em momentos distintos da entrada de dados pelo usuário.
+Tarefas que requerem tempo pode ser executadas em [background]. A entrevista
+pode [avaliar entradas do usuário] antes de o usuário submetê-la. Entrevistas podem
+realizar tarefas [quando o usuário não estiver logado], tais como enviar um [e-mail]
+para um usuário quando um prazo estiver prestes a se esgotar.
 
-**docassemble** is a multi-purpose platform, but it is particularly
-designed for [Legal Applications], and has special functionality for
-that specific purpose.
+**docassemble** é uma plataforma multi-propósito, mas foi particularmente
+desenhada para [Aplicações Legais], e possui funcionalidades especiais para
+este propósito.
 
-If you need to make an interview available in more than one language,
-**docassemble**'s [Language Support] features can help you manage
-translations.  **docassemble** also has a number of features for
-[Accessibility] by persons with disabilities.
+Se você precisar de disponibilizar uma entrevista em mais de um idioma,
+as funcionalidades de [Suporte a Idiomas] podem auxiliá-lo a gerenciar 
+traduções. **docassemble** também possui várias funcionalidades para 
+[Acessibilidade] por pessoas com deficiências.
 
-**docassemble** was built on the model of the open-source software
-development world.  Interviews can be bundled into [Packages], which
-can be shared on [GitHub] or moved between servers as ZIP files.
+**docassemble** foi desenvolvido de acordo com o modelo do mundo do
+software livre. Entrevistas podem ser transformadas em [Packages], que
+podem ser compartilhados no [GitHub] ou transportadas entre servidores
+como arquivos ZIP.
 
-The mobile-friendly web interface is the primary way that users will
-run interviews, but there is also the option of making interviews
-available via [Text Messaging].
+A interface web mobile-friendly é a forma principal que os usuários terão acesso
+ao executar entrevistas, mas também existe a opção de realização de entrevistas
+por meio de [SMS].
 
-When you deploy your interviews, there are a variety of ways you can
-provide support to your users.  The [Live Help] features allow
-operators to communicate with users using on-line chat.  Operators can
-see users' screens and even take control if necessary.  If
-communication by phone is necessary, operators can provide users with
-a special phone number and code that forwards a call without revealing
-the operator's actual phone number.
+Quando você implantar suas entrevistas, existem várias formas de oferecer
+suporte ao usuário. A funcionalidade de [Live Help] permite que operadores
+comuniquem-se com os usuários usando um chat on-line. Operadores podem
+ver as telas dos usuários e podem assumir o controle se necessário. Se
+a comunicação por telefone dor necessária, operadores pode fornecer ao usuário
+um número de telefone e um código especiais que transmite a ligação para 
+outro número sem revelar o número real do operador.
 
-**docassemble** has excellent [Scalability] when deployed in the
-cloud, so you don't have to worry about what will happen if your
-interviews get a lot of traffic.
+ **docassemble** possui excelente [Escalabilidade] quando implantado
+ na nuvem. Deste modo, você não precisa se preocupar quando suas entrevistas
+ receberem muito tráfego.
 
-If your interviews will process sensitive information, **docassemble**
-has a number of [Security] features to keep that information safe,
-such as server-side encryption.
+ Se suas entrevistas forem processar informação sensível, **docassemble**
+ possui diversas funcionalidades de [Segurança] que mantém os dados seguros, 
+ tais como criptografia no servidor.
 
-Developers will invariably make mistakes and encounter [Errors].
-**docassemble** tries to provide helpful error messages in the browser
-or in logs stored on the server.
+ Desenvolvedores invariavelmente cometem e encontram [Erros].
+**docassemble** tenta fornecer mensagens de erro úteis no navegador ou
+em logs armazenados no servidor.
 
-If you get stuck, you can seek out [Support] from the **docassemble**
-community, in particular by posting a question on the **docassemble**
-[Slack].  You might also find that there is an example interview in
-the [Recipes] that will help you solve your problem.
+Se você ficar empacado, você pode procurar [Suporte] da comunidade 
+**docassemble**, particulamente postando uma questão no [Slack] - apenas
+em inglês. 
 
-**docassemble** is free software available with a highly permissive
-open-source [License].  The software is updated frequently, and you
-can see what new features are available by reading the [Change Log].
+Para suporte em português entre em contato com a equipe da
+[Sílex Sistemas].
 
-Note that if you have been using **docassemble** for a long time, you
-need learn about the necessity of doing a [Python Upgrade].
+Você também pode encontrar exemplos úteis nas nossas [Receitas].
 
-# <a name="using documentation"></a>Using the documentation
+**docassemble** é um software livre disponibilizado de acordo com a
+licença em código MIT, que é muito permissiva [Licença]. O software
+é atualizado frequentemente, e você pode acompanhar as novas 
+funcionalidades pelo [Change Log].
+
+Observe que se você tiver usado o **docassemble** por muito tempo,
+você precisa de [Atualização do Python].
+
+# <a name="using documentation"></a>Usando a Documentação
 
 The **docassemble** documentation is intended more as a reference
 guide than as a manual that you have to read before getting started.
@@ -210,55 +216,55 @@ to decide to ask that question.
 {% endfor %}
 </ul>
 
-[Hello World]: {{ site.baseurl }}/docs/helloworld.html
-[Interviews]: {{ site.baseurl }}/docs/interviews.html
-[Initial Blocks]: {{ site.baseurl }}/docs/initial.html
+[Olá, Mundo!]: {{ site.baseurl }}/docs/helloworld.html
+[Entrevistas]: {{ site.baseurl }}/docs/interviews.html
+[Blocos Iniciais]: {{ site.baseurl }}/docs/initial.html
 [Blocos de Questão]: {{ site.baseurl }}/docs/questions.html
 [Setting Variables]: {{ site.baseurl }}/docs/fields.html
 [Question Modifiers]: {{ site.baseurl }}/docs/modifiers.html
-[Code]: {{ site.baseurl }}/docs/code.html
-[Interview Logic]: {{ site.baseurl }}/docs/logic.html
+[Código]: {{ site.baseurl }}/docs/code.html
+[Lógica da Entrevista]: {{ site.baseurl }}/docs/logic.html
 [Markup]: {{ site.baseurl }}/docs/markup.html
-[Documents]: {{ site.baseurl }}/docs/documents.html
-[Objects]: {{ site.baseurl }}/docs/objects.html
-[Groups]: {{ site.baseurl }}/docs/groups.html
-[Functions]: {{ site.baseurl }}/docs/functions.html
-[External Data]: {{ site.baseurl}}/docs/external.html
-[Legal Applications]: {{ site.baseurl }}/docs/legal.html
+[Documentos]: {{ site.baseurl }}/docs/documents.html
+[Objetos]: {{ site.baseurl }}/docs/objects.html
+[Grupos]: {{ site.baseurl }}/docs/groups.html
+[Funções]: {{ site.baseurl }}/docs/functions.html
+[Dados Externos]: {{ site.baseurl}}/docs/external.html
+[Aplicações Legais]: {{ site.baseurl }}/docs/legal.html
 [Special Variables]: {{ site.baseurl }}/docs/special.html
-[Language Support]: {{ site.baseurl }}/docs/language.html
-[Accessibility]: {{ site.baseurl }}/docs/accessibility.html
-[Roles]: {{ site.baseurl }}/docs/roles.html
-[background tasks]: {{ site.baseurl }}/docs/background.html
-[Background Tasks]: {{ site.baseurl }}/docs/background.html
+[Suporte a Idiomas]: {{ site.baseurl }}/docs/language.html
+[Acessibilidade]: {{ site.baseurl }}/docs/accessibility.html
+[Papéis]: {{ site.baseurl }}/docs/roles.html
+[Tarefas em Background]: {{ site.baseurl }}/docs/background.html
+[Tarefas em Background]: {{ site.baseurl }}/docs/background.html
 [Machine Learning]: {{ site.baseurl }}/docs/ml.html
-[Text Messaging]: {{ site.baseurl }}/docs/sms.html
+[SMS]: {{ site.baseurl }}/docs/sms.html
 [API]: {{ site.baseurl}}/docs/api.html
-[Custom Front Ends]: {{ site.baseurl }}/docs/frontend.html
+[Front End Customizado]: {{ site.baseurl }}/docs/frontend.html
 [User Login]: {{ site.baseurl }}/docs/users.html
 [Live Help]: {{ site.baseurl }}/docs/livehelp.html
-[Development Workflows]: {{ site.baseurl }}/docs/development.html
+[Fluxos de Desenvolvimento]: {{ site.baseurl }}/docs/development.html
 [Playground]: {{ site.baseurl }}/docs/playground.html
 [Packages]: {{ site.baseurl }}/docs/packages.html
-[Errors]: {{ site.baseurl }}/docs/errors.html
-[Support]: {{ site.baseurl }}/docs/support.html
-[Recipes]: {{ site.baseurl }}/docs/recipes.html
-[Administration]: {{ site.baseurl }}/docs/admin.html
-[Installation]: {{ site.baseurl }}/docs/installation.html
+[Erros]: {{ site.baseurl }}/docs/errors.html
+[Suporte]: {{ site.baseurl }}/docs/support.html
+[Receitas]: {{ site.baseurl }}/docs/recipes.html
+[Administração]: {{ site.baseurl }}/docs/admin.html
+[Instalação]: {{ site.baseurl }}/docs/installation.html
 [Docker]: {{ site.baseurl }}/docs/docker.html
-[Configuration]: {{ site.baseurl }}/docs/config.html
-[Scalability]: {{ site.baseurl }}/docs/scalability.html
-[Security]: {{ site.baseurl }}/docs/security.html
+[Configuração]: {{ site.baseurl }}/docs/config.html
+[Escalabilidade]: {{ site.baseurl }}/docs/scalability.html
+[Segurança]: {{ site.baseurl }}/docs/security.html
 [Change Log]: {{ site.baseurl }}/docs/changelog.html
-[Python Upgrade]: {{ site.baseurl }}/docs/twotothree.html
-[License]: {{ site.baseurl }}/docs/license.html
-[actions]: {{ site.baseurl }}/docs/functions.html#actions
-[Demonstration]: {{ site.baseurl }}/demo.html
+[Atualização do Python]: {{ site.baseurl }}/docs/twotothree.html
+[Licença]: {{ site.baseurl }}/docs/license.html
+[ações]: {{ site.baseurl }}/docs/functions.html#actions
+[Demonstração]: {{ site.baseurl }}/demo.html
 [YAML]: https://en.wikipedia.org/wiki/YAML
 [Python]: https://en.wikipedia.org/wiki/Python_%28programming_language%29
 [GitHub]: https://github.com/
 [Reserved Names]: {{ site.baseurl }}/docs/special.html#reserved
-[demonstration]: {{ site.baseurl }}/demo.html
+[Demonstração]: {{ site.baseurl }}/demo.html
 [demonstration page]: {{ site.baseurl}}/demo.html
 [tutorial]: {{ site.baseurl}}/docs/helloworld.html
 [Playground]: {{ site.baseurl}}/docs/playground.html
@@ -271,13 +277,14 @@ to decide to ask that question.
 [Deploy]: {{ site.baseurl }}/deploy.html
 [DOCX]: {{ site.baseurl }}/docs/documents.html#docx template file
 [PDF]: {{ site.baseurl }}/docs/documents.html#pdf template file
-[lists]: {{ site.baseurl }}/docs/groups.html#gather list
-[dictionaries]: {{ site.baseurl }}/docs/groups.html#gather dictionary
-[features]: {{ site.baseurl }}/docs/initial.html#features
+[listas]: {{ site.baseurl }}/docs/groups.html#gather list
+[dicionários]: {{ site.baseurl }}/docs/groups.html#gather dictionary
+[funcionalidades]: {{ site.baseurl }}/docs/initial.html#features
 [screen parts]: {{ site.baseurl }}/docs/questions.html#screen parts
-[up and running]: {{ site.baseurl }}/deploy.html
+[em execução]: {{ site.baseurl }}/deploy.html
 [background]: {{ site.baseurl }}/docs/background.html#background
-[evaluate user input]: {{ site.baseurl }}/docs/background.html#check in
-[when the user is not logged in]: {{ site.baseurl }}/docs/background.html#scheduled
+[avaliar entradas do usuário]: {{ site.baseurl }}/docs/background.html#check in
+[quando o usuário não estiver logado]: {{ site.baseurl }}/docs/background.html#scheduled
 [e-mail]: {{ site.baseurl }}/docs/functions.html#send_email
 [Slack]: https://join.slack.com/t/docassemble/shared_invite/enQtMjQ0Njc1NDk0NjU2LTUyOGIxMDcxYzg1NGZhNDY5NDI2ZTVkMDhlOGJlNTgzZTUwYzNhYTJiMTJmMDYzYjQ0YWNmNjFiOTE5NmQzMjc
+[Sílex Sistemas]: https://www.silexsistemas.com.br
