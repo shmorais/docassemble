@@ -1,2 +1,2 @@
 # docassemble
-A free, open-source expert system for guided interviews and document assembly, based on Python, YAML, and Markdown.
+Um sistema expert livre, em código aberto, para entrevistas guiadas e montagem de documentos, baseado em Python, YAML, e Markdown.
