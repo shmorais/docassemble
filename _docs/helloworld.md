@@ -1,10 +1,10 @@
 ---
 layout: docs
-title: Hello world example
+title: Olá, Mundo!
 short_title: Hello World
 ---
 
-Here is a simple interview file that says "Hello, world!" to the user.
+Esta é uma entrevista simples que diz "Olá, Mundo!" para o usuário.
 
 {% highlight yaml %}
 ---
@@ -15,23 +15,23 @@ mandatory: True
 ---
 {% endhighlight %}
 
-To run this, first set up your server using [Docker].
+Para executar este procedimento, primeiramente configure seu servidor usando 
+[Docker].
 
-Once **docassemble** is up and running in your web browser, click "Log
-in" in the upper right hand corner.  The default username and password
-are:
+Assim que o servidor de **docassemble** estiver em execução, clique em
+"Log in" no canto superior direito. O usuário e senha padrão são:
 
    * **E-mail**: admin@admin.com
    * **Password**: password
 
-The default password ("password") will need to be changed.  Change it
-to something that is at least eight characters long with at least one
-lowercase letter and one number.  You should also change the e-mail
-address by going to [User List].
+A senha padrão ("password") precisará ser trocada. Troque-a por outra
+que tenha ao menos oito caracteres de comprimento e no mínimo uma letra
+minúscula e um número. Você também deve trocar seu e-mail acessando 
+[User List].
 
-Then, from the menu, select [Playground].  The [Playground] is a
-"sandbox" area where you can develop interviews and test them, all
-inside the web browser.
+Então, no menu, selecione [Playground]. O [Playground] é uma "sandbox", 
+ou seja, uma área segura na qual você pode desenvolver e testar à vontade suas
+entrevistas a partir do navegador.
 
 ![Playground]({{ site.baseurl }}/img/menu-selection-playground.png)
 
