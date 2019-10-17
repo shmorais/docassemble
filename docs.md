@@ -5,12 +5,12 @@ short_title: Documentation
 order: 20
 ---
 
-**docassemble** is a platform for creating mobile-friendly web
-applications called [Interviews] that ask one question at a time in
-order to reach an end point.  This end point may be the presentation
-of advice, the creation of a signed document, the submission of an
-application, or something else.  Run the [Demonstration] to get an
-idea for what **docassemble** applications look like.
+**docassemble** é uma plataforma para criação de aplicações web
+mobile-friendly chamadas [Interviews] (Entrevistas). Estas perguntam
+uma questão de cada vez de até atingirem seu objetivo. O objetivo
+pode ser a apresentação de um parecer, a criação de um documento 
+assinado, o envio de um cadastro, ou outra coisa. Execute a [Demonstration] 
+(Demonstração) para ter uma ideia de como aplicações **docassemble** são.
 
 You can run **docassemble** on your laptop, but most people run it "in
 the cloud" on [Amazon Web Services], [Digital Ocean], or another
