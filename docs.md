@@ -41,60 +41,58 @@ Se você passar o mouse sobre o código fonte, reticências aparecerão
 no canto inferior direito; se você clicar nas reticências, você
 verá o [YAML] completo da entrevista.
 
-Some blocks are [Question Blocks] that represent screens that the user
-will actually see.  (Two examples are above.)  The basic structure of
-question blocks is simple, but there are a lot of possible [Question
-Modifiers] that can make your screens do different things.
+Alguns blocos são [Blocos de Questão] que representam as telas que o 
+usuário irá de fato ver, como nos exemplos acima. A estrutura básica
+de um bloco de questões é simples, mas existem vários [Question
+Modifiers] possíveis, que podem fazer com que suas telas realizem
+diferentes tarefas.
 
-The information gathered from users is stored in "variables," and the
-purpose of most question blocks will be [Setting Variables].  You can
-use whatever variable names you want, except you can't use the names
-of [Special Variables] that already have their own meaning.
+A informação recolhida do usuário é armazenada em "variáveis", e o 
+propósito da maioria dos blocos de questão é [Setting Variables]. 
+Você pode usar quaisquer nomes de variável que quiser, exceto alguns
+nomes de [Special Variables] que possuem seu valor pré definido.
 
-**docassemble** supports [many different types] of variables -- even
-[file uploads] and [touchscreen signatures].  One of the most powerful
-features is the ability to store information in a structured way using
-[Objects].  When you want to collect one or more pieces of related
-information, you can collect the information into [Groups] such as
-[lists] and [dictionaries].
+**docassemble** suporta [many different types] de variáveis -- mesmo
+[file uploads] e [touchscreen signatures]. Uma das características mais 
+poderosas é a habilidade de armazenar informações numa forma estruturada
+usando [Objects]. Quando você quer coletar um ou mais pedações de informações
+relacionadas, você pode fazê-lo em [Groups] tais como [lists] e [dictionaries].
 
-There are other types of blocks besides [`question`] blocks.
+Existem outros tipos de blocos além de blocos de [`question`].
 
-[Initial Blocks] set interview-wide options, like the special
-[features] of an interview, or the default [screen parts].
+[Initial Blocks] definem opções para toda a entrevista, tais como 
+[features] especiais do questionário ou as [screen parts] padrão.
 
-[Code] blocks allow you to set variables through computation.  Code is
-written in [Python].  To write an interview, you do not need to know
-much about [Python] except how to write "if/then/else" statements.
+Blocos de [Code] permitem que variáveis sejam definidas mediante computação.
+O código é escrito em [Python]. Para escrever uma entrevista, você não precisa
+de saber muito sobre [Python], além de como escrever instruções "if/then/else".
 
 {% highlight yaml %}
 code: |
-  if plaintiff.county == defendant.county:
-    jurisdiction_is_proper = True
+  if autor.municipio == reu.municipio:
+    foro_competente = True
 {% endhighlight %}
 
-You can even use "fuzzy logic" with **docassemble**'s [Machine
-Learning] feature.
+VocÊ pode mesmo usar lógica fuzzy com a funcionalidade de [Machine
+Learning] do **docassemble**.
 
-**docassemble** decides which questions to ask, and the order in which
-to ask them, according to the [Interview Logic].  You can specify the
-order of questions with great specificity if you want, or you can just
-specify an end goal and let **docassemble** figure everything out on
-its own.
+**docassemble** decide quais questões fazer, e a ordem na qual eles são
+feitas, de acordo com a [Interview Logic]. Você pode especificar a ordem
+das questões com grande detalhamento se quiser, ou pode apenas definir 
+o objetivo final e deixar o **docassemble** descobrir a melhor ordem de
+execução.
 
-A popular use of interviews is the assembly of [Documents] (hence the
-name **docassemble**).  You can write document templates in [DOCX] or
-[PDF] formats.  You can also write documents the same way you write
-questions, in plain text using [Markup] to indicate formatting.
+Um uso popular das entrevistas é a montagem de [Documents], daí o nome
+**docassemble** - document + assembly (montagem).  Você pode redigir templates
+de documentos em [DOCX] ou [PDF]. Você também pode escrever documentos do mesmo
+modo que escreve questões, em texto puro usando [Markup] para indicar formatação.
 
-As your interviews become more sophisticated, you will find it useful
-to invoke [Functions] to do things like conjugate verbs, compute
-differences between dates, or offer the user hyperlinks that perform
-special [actions].
+Na medida em que suas entrevistas se tornam mais sofisticadas, você vai achar
+útil invocar [Functions] para fazer coisas tais como conjugar verbos, computar
+diferenças entre datas, ou oferecer ao usuário links que realizam [actions] especiais.
 
-**docassemble** uses a [User Login] system that allows users to create
-accounts, save their answers, and resume their interviews at a later
-date.
+**docassemble** possui um sistema de [User Login] que permite usuários criarem
+contas, salvarem suas respostas e reiniciarem suas entrevistas posteriormente.
 
 Since **docassemble** is a free and open-source application, it is
 designed to be interoperable with other applications.  There are a
@@ -215,7 +213,7 @@ to decide to ask that question.
 [Hello World]: {{ site.baseurl }}/docs/helloworld.html
 [Interviews]: {{ site.baseurl }}/docs/interviews.html
 [Initial Blocks]: {{ site.baseurl }}/docs/initial.html
-[Question Blocks]: {{ site.baseurl }}/docs/questions.html
+[Blocos de Questão]: {{ site.baseurl }}/docs/questions.html
 [Setting Variables]: {{ site.baseurl }}/docs/fields.html
 [Question Modifiers]: {{ site.baseurl }}/docs/modifiers.html
 [Code]: {{ site.baseurl }}/docs/code.html
