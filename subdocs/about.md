@@ -13,7 +13,7 @@ Elas podem enviar um cadastro, direcionar o usuário para outros recursos na
 internet, [store] entradas do usuário, interagir [APIs], ou simplesmente fornecer
 informação.
 
-**docassemble** foi criado por um  [lawyer/computer programmer] com o objetivo
+**docassemble** foi criado por um  [advogado/programador] com o objetivo
 de automatizar o trabalho jurídico, mas é uma plataforma de propósito geral
 que podem encontrar aplicações numa variedade de campos.
 
@@ -21,7 +21,7 @@ que podem encontrar aplicações numa variedade de campos.
 # Características
 
 [APIs]: {{ site.baseurl }}/docs/functions.html#google sheets example
-[lawyer/computer programmer]: https://www.linkedin.com/in/jonathan-pyle-6800a75/
+[advogado/programador]: https://www.linkedin.com/in/jonathan-pyle-6800a75/
 [PDF]: https://en.wikipedia.org/wiki/Portable_Document_Format
 [RTF]: https://en.wikipedia.org/wiki/Rich_Text_Format
 [DOCX]: https://en.wikipedia.org/wiki/Office_Open_XML
