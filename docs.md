@@ -12,30 +12,34 @@ pode ser a apresentação de um parecer, a criação de um documento
 assinado, o envio de um cadastro, ou outra coisa. Execute a [Demonstration] 
 (Demonstração) para ter uma ideia de como aplicações **docassemble** são.
 
-You can run **docassemble** on your laptop, but most people run it "in
-the cloud" on [Amazon Web Services], [Digital Ocean], or another
-hosting service.  The [Deploy] page describes a variety of ways you
-can get your own **docassemble** instance up and running.  You can
-install **docassemble** on a server using [Docker] or (if you are an
-expert) follow the detailed [Installation] instructions.  For the most
-part, the [Administration] and [Configuration] of **docassemble** can
-be handled through the web interface.
+Você pode executar **docassemble** na sua máquina, mas a maior parte 
+das pessoas executa "na nuvem", em serviços de hospedagem como 
+[Amazon Web Services], [Digital Ocean], ou outros. A página de [Deploy]
+descreve uma variedade de formas pelas quais você pode ter a sua
+própria instância do  **docassemble** funcionando. VocÊ pode instalar
+**docassemble** num servidor usando [Docker] ou, se for um expert, seguir
+as instruções detalhadas de [Installation]. Na maioria dos casos, a 
+[Administration] e [Configuration] do **docassemble** podem ser gerenciados
+pela interface web.
 
-# <a name="intro"></a>Introduction to **docassemble**
+# <a name="intro"></a>Introdução ao **docassemble**
 
-Interview developers write interviews in [YAML] format, a plain-text
-format that is human-readable but also machine-readable.
+Desenvolvedores de entrevistas escrevem-nas em [YAML], um formato 
+puro texto que é legível por seres humanos e por máquinas. Em nosso
+texto iremos nos referir às entrevistas por este nome, para manter a
+coerência com o texto original. Entretanto, achamos mais fácil pensar 
+nas entrevistas como questionários ou formulários web.
 
-An interview consists of multiple "blocks."  Blocks are pieces of text
-separated by `---`, which is a record separator in [YAML].  For
-example:
+Uma entrevisa consiste de múltiplos "blocos". Blocos são pedações de 
+texto separados por `---`, que é um separador de registro em [YAML]. 
+Por exemplo:
 
 {% include demo-side-by-side.html demo="turnips-worms" %}
 
-You can click the screenshot above to see this interview in action.
-If you hover over the source code, three dots will appear in the
-lower-right corner; if you click the three dots, you can see full
-interview [YAML] behind the sample interview.
+Você pode clicar na imagem acima para ver a entrevista em ação.
+Se você passar o mouse sobre o código fonte, reticências aparecerão
+no canto inferior direito; se você clicar nas reticências, você
+verá o [YAML] completo da entrevista.
 
 Some blocks are [Question Blocks] that represent screens that the user
 will actually see.  (Two examples are above.)  The basic structure of
