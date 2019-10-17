@@ -180,32 +180,32 @@ você precisa de [Atualização do Python].
 
 # <a name="using documentation"></a>Usando a Documentação
 
-The **docassemble** documentation is intended more as a reference
-guide than as a manual that you have to read before getting started.
+A documentação do **docassemble** deve ser entendida mais como uma 
+referência do que como um manual que deve ser integralmente lido antes
+de se iniciar o trabalho.
 
-The best way to learn about **docassemble** is to start creating your
-own interview.  Start by following along with the "Hello, world"
-[tutorial] that explains how to create a simple interview.  Once you
-get that working, you can experiment with adding more questions to it.
+A melhor forma de aprender sobre o **docassemble** é criar sua própria
+entrevista. Comece por seguir o [tutorial] "Olá, Mundo!" que explica
+comom criar uma entrevista simples. Superada esta etapa, tente adicionar
+mais questões a esta entrevista.
 
-The best way to learn about more advanced **docassemble** features is
-to study working examples.  The sections of this documentation site
-contain a number of side-by-side examples comparing source code to
-screenshots.  You can click on the screenshots to run the interviews.
-The code next to the screenshots is often only an excerpt of the full
-interview.  To see the full source code of the interview, hover over
-the source code and click the button that appears in the lower right
-corner.  In addition, while you are developing interviews in the
-[Playground], you can browse working examples of many of
-**docassemble**'s features.
+A melhor forma de aprender sobre tópicos mais avançados do **docassemble**
+é estudar os exemplos fornecidos. As seções desta documentação contém
+diversos exemplos que comparam lado a lado imagens do sistema e código
+fonte. Você pode clicar nas imagens para executar as entrevistas. O
+código ao lado da imagem é normalmente apenas um excerto da entrevista
+completa. Para ver o código fonte da entrevista inteira, passe o mouse sobre
+o código fonte e clique no botão que aparece no canto direito inferior. 
+Além disso, enquanto estiver desenvolvento entrevistas no [Playground],
+você pode pesquisar os diversos exemplos.
 
-There is also a full-featured sample interview linked from the
-[demonstration page].  While you are using the interview you can click
-"Source" in the navigation bar to toggle display of the source code
-for the question and an explanation of the path **docassemble** took
-to decide to ask that question.
+Também está disponível uma entrevista completa na [página de demonstração]. 
+Enquanto você estiver usando a entrevista, você pode clicar em
+"Source" na barra de navegação para ativar a exibição do código
+fonte para a questão e uma explicação do porquê o **docassemble** usou 
+aquele caminho para fazer a questão.
 
-# <a name="toc"></a>Sections of the documentation
+# <a name="toc"></a>Seções da Documentação
 
 <ul class="interiortoc">
 {% for section in site.data.docs %}
@@ -265,7 +265,7 @@ to decide to ask that question.
 [GitHub]: https://github.com/
 [Reserved Names]: {{ site.baseurl }}/docs/special.html#reserved
 [Demonstração]: {{ site.baseurl }}/demo.html
-[demonstration page]: {{ site.baseurl}}/demo.html
+[página de demonstração]: {{ site.baseurl}}/demo.html
 [tutorial]: {{ site.baseurl}}/docs/helloworld.html
 [Playground]: {{ site.baseurl}}/docs/playground.html
 [Digital Ocean]: https://www.digitalocean.com/
