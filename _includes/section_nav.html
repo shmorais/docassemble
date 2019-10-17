@@ -7,18 +7,18 @@
           <nav style="text-align:center;" aria-label="Navigation to previous or next section">
             <ul class="pagination">
               {%- if forloop.first %}
-                <li class="disabled page-item"><a class="page-link" href="#" aria-label="Back"><i class="fas fa-chevron-left"></i> Back</a></li>
+                <li class="disabled page-item"><a class="page-link" href="#" aria-label="Back"><i class="fas fa-chevron-left"></i> Voltar</a></li>
               {%- else %}
                 {%- assign previous = forloop.index0 | minus: 1 %}
                 {%- assign previous_page = docs[previous] | prepend:"/docs/" | append:".html" %}
-                <li class="page-item"><a class="page-link" href="{{ previous_page }}" aria-label="Back"><i class="fas fa-chevron-left"></i> Back</a></li>
+                <li class="page-item"><a class="page-link" href="{{ previous_page }}" aria-label="Back"><i class="fas fa-chevron-left"></i> Voltar</a></li>
               {%- endif %}
               {%- if forloop.last %}
-                <li class="disabled page-item"><a class="page-link" href="#" aria-label="Next">Next <i class="fas fa-chevron-right"></i></a></li>
+                <li class="disabled page-item"><a class="page-link" href="#" aria-label="Next">Próximo <i class="fas fa-chevron-right"></i></a></li>
               {%- else %}
                 {%- assign next = forloop.index0 | plus: 1 %}
                 {%- assign next_page = docs[next] | prepend:"/docs/" | append:".html" %}
-                <li class="page-item"><a class="page-link" href="{{ next_page }}" aria-label="Next">Next <i class="fas fa-chevron-right"></i></a></li>
+                <li class="page-item"><a class="page-link" href="{{ next_page }}" aria-label="Next">Próximo <i class="fas fa-chevron-right"></i></a></li>
               {%- endif %}
             </ul>
           </nav>
