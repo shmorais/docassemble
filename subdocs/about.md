@@ -1,23 +1,24 @@
-# What is docassemble?
+# O que é docassemble?
 
-**docassemble** is a free, open-source expert system for guided
-interviews and document assembly.  It provides a web site that
-conducts interviews with users.  Based on the information gathered,
-the interviews can present users with documents in [PDF], [RTF], or
-[DOCX] format, which users can download or e-mail.
+**docassemble** é um sistema expert, livre e em código aberto, usado 
+para entrevistas guiadas e montagem de documentos (document assembly).
+Ele fornece um web site que conduz entrevistas com usuários.
+Baseado na informação coletada, as entrevistas podem gerar para os usuários
+documentos em [PDF], [RTF], ou [DOCX], que podem ser baixados ou enviados por
+e-mail.
 
-Though the name emphasizes the document assembly feature,
-**docassemble** interviews do not need to assemble a document; they
-might submit an application, direct the user to other resources on the
-internet, [store] user input, interact with [APIs], or simply provide the user with
-information.
+Embora o nome enfatize a montagem de documentos (document assembly), as 
+entrevistas **docassemble** não precisam necessariamente montar um documento.
+Elas podem enviar um cadastro, direcionar o usuário para outros recursos na
+internet, [store] entradas do usuário, interagir [APIs], ou simplesmente fornecer
+informação.
 
-**docassemble** was created by a [lawyer/computer programmer] for
-purposes of automating the practice of law, but it is a
-general-purpose platform that can find applications in a variety of
-fields.
+**docassemble** foi criado por um  [lawyer/computer programmer] com o objetivo
+de automatizar o trabalho jurídico, mas é uma plataforma de propósito geral
+que podem encontrar aplicações numa variedade de campos.
 
-# Features
+
+# Características
 
 [APIs]: {{ site.baseurl }}/docs/functions.html#google sheets example
 [lawyer/computer programmer]: https://www.linkedin.com/in/jonathan-pyle-6800a75/
