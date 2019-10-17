@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Overview of docassemble
-short_title: Documentation
+title: Visão Geral do docassemble
+short_title: Documentação
 order: 20
 ---
 
