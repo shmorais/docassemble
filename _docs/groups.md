@@ -1033,26 +1033,28 @@ In the examples above, the process of asking questions that populate
 the list is triggered implicitly by code like `${ fruit.number() }`,
 `${ fruit }` or `% for item in fruit:`.
 
-If you want to ask the questions at a particular time, you can do so
-by referring to `fruit.gather()`.  (Behind the scenes, this is the
-same method used when the process is implicitly triggered.)
+Se você quiser fazer as perguntas num momento específico, você pode
+fazê-lo se referinfo a `fruit.gather()`. Nos bastidores, este
+é o mesmo métido que é chamado quando o processo é implicitamente
+disparado.
 
 {% include side-by-side.html demo="gather-fruit-gather" %}
 
-The [`.gather()`] method accepts some optional keyword arguments:
+O método [`.gather()`] aceita alguns argumentos keyword opcionais:
 
-* `minimum` can be set to the minimum number of items you want to
-  gather.  The `.there_are_any` attribute will not be sought.  The
-  `.there_is_another` attribute will be sought after this minimum
-  number is reached.
-* `number` can be set to the total number of items you want to
-  gather.  The `.there_is_another` attribute will not be sought.
-* `item_object_type` can be set to the type of object each element of
-  the group should be.  (This is not available for [`DASet`] objects.)
-* `complete_attribute` can be set to the name of an attribute that
-  should be sought for each item during the gathering process.  You
-  can also set the [`complete_attribute`] attribute of the group object
-  itself.
+* `minimum` pode ser definido como o número mínimo de itens que você 
+  deseja coletar.  O atributo `.there_are_any` não será procurado.
+  O atributo `.there_is_another` será procurado depois que esse número
+  mínimo for alcançado.
+* `number` pode ser definido como o número total de items que você 
+  deseja coletar.  O atributo `.there_is_another` não será procurado.
+* `item_object_type` pode ser definido como o tipo de objeto de cada 
+  elemento do grupo. Isso não está disponível para objetos do tipo 
+   [`DASet`].
+* `complete_attribute` pode ser definido como o nome do atributo que
+  deverá ser procurado que deverá ser procurado para cada item durante
+  o processo de coleta. Você também pode definir o atributo 
+  [`complete_attribute`] do próprio grupo de objetos.
 
 The [`.gather()`] method is not the only way that a gathering process
 can be triggered.  The `.auto_gather` attribute controls whether the
