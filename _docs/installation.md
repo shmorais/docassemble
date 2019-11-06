@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: How to install docassemble
-short_title: Installation
+title: Como instalar o Docassemble
+short_title: Instalação
 ---
 
 If you are only interested in seeing how **docassemble** works, you do
@@ -138,32 +138,29 @@ services:
 The authentication keys for these services can be set up in the
 [configuration].
 
-# <a name="packages"></a>Installing underlying packages
+# <a name="packages"></a>Instalando os pacotes do sistema operacional
 
-Before installing packages, update the package lists.
+Antes de instalar os pacotes, atualize a listagem de pacotes.
 
 {% highlight bash %}
 sudo apt-get update
 {% endhighlight %}
 
-The following dependencies can be installed from [Debian] or
-[Ubuntu] packages:
+As seguintes dependências podem ser instaladas a partir de pacotes [Debian]
+ou [Ubuntu]:
+
+Testado com Ubuntu 18.04 LTF
 
 {% highlight bash %}
-sudo apt-get install \
+sudo apt install \
 apt-utils \
 tzdata \
-python \
-python-dev \
 wget \
 unzip \
 git \
 locales \
 nginx \
-postgresql \
 gcc \
-supervisor \
-s4cmd \
 make \
 perl \
 libinline-perl \
@@ -173,8 +170,6 @@ automake \
 libjpeg-dev \
 libpq-dev \
 logrotate \
-nodejs \
-npm \
 cron \
 libxml2 \
 libxslt1.1 \
@@ -182,8 +177,6 @@ libxml2-dev \
 libxslt1-dev \
 libcurl4-openssl-dev \
 libssl-dev \
-redis-server \
-rabbitmq-server \
 libtool \
 libtool-bin \
 syslog-ng \
@@ -200,7 +193,6 @@ libzbar0 \
 libgs-dev \
 default-libmysqlclient-dev \
 libgmp-dev \
-python-passlib \
 libsasl2-dev \
 libldap2-dev \
 python3 \
@@ -208,9 +200,7 @@ exim4-daemon-heavy \
 python3-venv \
 python3-dev \
 imagemagick \
-pdftk \
 pacpl \
-pandoc \
 texlive \
 texlive-luatex \
 texlive-latex-recommended \
@@ -251,12 +241,34 @@ libncurses5-dev \
 libncursesw5-dev \
 libreadline-dev \
 libsqlite3-dev
+redis-server \
+rabbitmq-server \
+supervisor \
+python \
+python-dev \
+python-passlib \
+postgresql \
+s4cmd \
+nodejs \
+npm \
 {% endhighlight %}
 
-You may need to make slight changes to to the package list above,
-depending on which distribution and version you are using.
 
-The latest version of [Pandoc] can be installed by doing:
+https://askubuntu.com/questions/1028522/how-can-i-install-pdftk-in-ubuntu-18-04-and-later
+pdftk \
+
+A instalação desta lista pode sofrer pequenas mudanças de acordo com
+a distribução e a versão utilizada.
+
+<a name="pandoc"></a>## Instalação do Pandoc
+
+O [Pandoc] pode ser instalado com o pacote fornecido pelo sistema:
+
+{% highlight bash %}
+sudo apt install pandoc
+{% endhighlight %}
+
+A versão mais recente do [Pandoc] pode ser instalada com os comandos:
 
 {% highlight bash %}
 cd /tmp \
@@ -318,10 +330,8 @@ storage], run:
 sudo npm install -g azure-storage-cmd
 {% endhighlight %}
 
-**docassemble** uses locale settings to format numbers, get currency
-symbols, and other things.  Do `echo $LANG` to see what locale you are
-using.  If it is not something like `en_US.UTF-8`, you will want to
-set up an appropriate locale for your region:
+**docassemble** usa configurações de locale para formatar números, símbolos de moeda e outras coisas. Para ver o locale ativo digite `echo $LANG`. A saída deve ser algo do tipo `en_US.UTF-8`. O locale a ser definido dever ser
+adequado à sua região:
 
 {% highlight bash %}
 sudo dpkg-reconfigure locales
@@ -338,7 +348,11 @@ update-locale
 On [Ubuntu], you may need to do `sudo apt-get install
 language-pack-en` (or other package appropriate for your locale).
 
-Install the latest version of [Let's Encrypt]:
+Instale a última versão de [Let's Encrypt]:
+
+Mas quem criou a pasta /usr/share/docassemble?
+==============================================
+Ver abaixo o comando que cria as pastas
 
 {% highlight yaml %}
 cd /usr/share/docassemble
@@ -364,26 +378,25 @@ cd /opt \
 && cd /tmp
 {% endhighlight %}
 
-# <a name="docassemble"></a>Installing **docassemble** itself
+# <a name="docassemble"></a>Instalando o **docassemble**
 
-The recommended way to install **docassemble** is to create a [Python
-virtual environment] with ownership permissions set to the web server
-user (`www-data` on [Debian]/[Ubuntu]), and to install **docassemble**
-and its [Python] dependencies into this virtual environment using
+A forma recomendada de instalar **docassemble** é criar um [Python
+virtual environment] e definir o usuário do servidor web
+user (`www-data` no [Debian]/[Ubuntu]) como dono da pasta, e instalar **docassemble** e suas dependências [Python] neste ambiente virtual usando 
 [pip].
 
-There are two reasons for this.  First, if the ownership of the
-directories and files is set to `www-data`, developers will be able to
-install and upgrade [Python] packages [through the web interface], and
-they will not need to use the command line.  Second, installing with
-[pip] into a virtual environment will ensure that all of the [Python]
-packages are the latest version; the versions that are packaged with
-Linux distributions are not always current.
+São dois os motivos para isso. Primeiro, se a propriedade dos diretórios
+e dos arquivos for definida para`www-data`, os desenvolvedores serão capazes
+de instalar e atualizar os pacotes [Python] [through the web interface], e
+não será, portanto, necessário usar a lina de comando. Segundo, instalar
+com [pip] em um ambiente virtual assegurará que todos os pacotes [Python]
+estejam na versão mais atualizada; as versões empacotadas com as distribuições
+Linux nem sempre são as mais atuais. **TODO** Conferir se as versões mais
+atuais funcionam.
 
-Before setting up the [Python virtual environment], you need to create
-directories needed by [pip] for temporary files and the directories in
-which **docassemble** and the [Python virtual environment] will live:
-
+Antes de instalar o [Python virtual environment], você precisa criar as
+pastas requeridas pelo [pip] para os arquivos temporários e as pastas nas quais **docassemble** e o [Python virtual environment] ficarão.
+ 
 {% highlight bash %}
 sudo mkdir -p /etc/ssl/docassemble \
    /usr/share/docassemble/local3.6 \
@@ -407,22 +420,25 @@ sudo chown -R www-data.www-data \
    /usr/share/docassemble/files
 {% endhighlight %}
 
-The **docassemble** application itself is [on GitHub].  Clone the
-repository (e.g., in your home directory):
+O **docassemble** propriamente dito está [on GitHub]. Clone o repositório
+(e.g., na sua pasta home):
 
 {% highlight bash %}
 git clone {{ site.github.repository_url }}
 {% endhighlight %}
+**TODO** colocar link para jhpyle
 
-This creates a directory called `docassemble` in the current
-directory.
+Isso cria uma pasta chamada `docassemble` na pasta local.
 
-There are four packages in the git repository:
+São quatro pacotes no repositório git:
 
-1. <a name="docassemble"></a>[`docassemble`]: an empty namespace package;
-2. <a name="docassemble.base"></a>[`docassemble.base`]: the core functionality;
-3. <a name="docassemble.webapp"></a>[`docassemble.webapp`]: the web application framework; and
-4. <a name="docassemble.demo"></a>[`docassemble.demo`]: a demonstration interview package
+1. <a name="docassemble"></a>[`docassemble`]: uma pacote vazio para namespace;
+2. <a name="docassemble.base"></a>[`docassemble.base`]: as funcionalidades 
+primcipais;
+3. <a name="docassemble.webapp"></a>[`docassemble.webapp`]: a aplicação
+web;
+4. <a name="docassemble.demo"></a>[`docassemble.demo`]: um entrevista de 
+demonstração
 
 The `docassemble` package is empty because it is a "namespace"
 package.  (This facilitates the use of user-created add-on packages.)
@@ -452,6 +468,14 @@ sudo su www-data
 
 and run the following as `www-data` (i.e., first do `sudo su www-data`):
 
+Se você receber um aviso Attempted login by root e não conseguir logar
+com www-data, isso significa que o usuário www-data está sem shell definido
+no arquivo de usuários (em /etc/passwd: www-data está como nologin). Para alterar esse comportamento, altere o usuário www-data com o comando abaixo, definindo bash como seu respectivo shell.
+
+{% highlight bash %}
+chsh -s /bin/bash www-data
+{% endhighlight %}
+
 {% highlight bash %}
 cd /tmp
 python3.6 -m venv --copies /usr/share/docassemble/local3.6
@@ -472,6 +496,54 @@ pip3 install --upgrade \
   pycryptodomex \
   six \
   setuptools
+{% endhighlight %}
+
+Isso vai criar um ambiente virtual em `/usr/share/docassemble/local3.6` e instalar nele os pacotes listados acima e suas dependências.
+
+Após a instalação, veja o resultado de pip list em 04/11/2019:
+
+
+Package          Version
+---------------- -------
+3to2             1.1.1  
+bcrypt           3.1.7  
+blinker          1.4    
+boto3            1.10.8 
+botocore         1.13.8 
+cffi             1.13.2 
+Click            7.0    
+docutils         0.15.2 
+Flask            1.1.1  
+Flask-Login      0.4.1  
+Flask-Mail       0.9.1  
+Flask-SQLAlchemy 2.4.1  
+Flask-WTF        0.14.2 
+itsdangerous     1.1.0  
+Jinja2           2.10.3 
+jmespath         0.9.4  
+MarkupSafe       1.1.1  
+passlib          1.7.1  
+pip              19.3.1 
+pkg-resources    0.0.0  
+pycparser        2.19   
+pycryptodome     3.9.1  
+pycryptodomex    3.9.1  
+python-dateutil  2.8.1  
+pytz             2019.3 
+s3transfer       0.2.1  
+s4cmd            2.1.0  
+setuptools       41.6.0 
+six              1.12.0 
+SQLAlchemy       1.3.10 
+urllib3          1.25.6 
+uWSGI            2.0.18 
+Werkzeug         0.16.0 
+WTForms          2.2.1  
+
+Para instalação dos pacotes do **docassemble** abaixo, você deve estar na mesma pasta na qual foi clonado o repositório. Observa que o comando pip é
+dado com referência ao caminho relativo das pastas do **docassemble** abaixo:
+
+{% highlight bash %}
 pip3 install --upgrade \
   ./docassemble/docassemble \
   ./docassemble/docassemble_base \
@@ -480,9 +552,7 @@ pip3 install --upgrade \
 cp ./docassemble/Docker/pip.conf /usr/share/docassemble/local3.6/
 {% endhighlight %}
 
-This will install a Python 3.6 virtual environment at
-`/usr/share/docassemble/local3.6` and install **docassemble** into it.
-
+Isso vai instalar o **docassemble** no mesmo caminho do ambiente virtual acima, ou seja, em `/usr/share/docassemble/local3.6`
 
 The `pip.conf` file is necessary because it enables the use of
 [GitHub] package references in the `setup.py` files of **docassemble**
@@ -494,6 +564,10 @@ installed with `pip install docassemble.webapp`.
 
 Then, you need to move certain files into place for the web
 application.  Still acting as `www-data`, do:
+
+**TODO** os comandos de copiar abaixo dão erro de permissão.
+Nos comandos chown acima não estão incluídas as pastas abaixo. Mas como
+ele manda copiar com www-data, vou mudar o owner do destino para www-data
 
 {% highlight bash %}
 cp ./docassemble/docassemble_webapp/docassemble.wsgi /usr/share/docassemble/webapp/
@@ -507,13 +581,13 @@ file templates for **docassemble** and [NGINX].
 
 The `.sh` files are scripts for running background processes.
 
-You can stop being `www-data` now:
+Você pode sair do usuário `www-data` agora:
 
 {% highlight bash %}
 exit
 {% endhighlight %}
 
-As a superuser, move the following system files into place:
+Como superusuário, copie os arquivos abaixo para os locais de destino:
 
 {% highlight bash %}
 sudo cp ./docassemble/Docker/docassemble.logrotate /etc/logrotate.d/docassemble
@@ -526,7 +600,9 @@ sudo cp ./docassemble/Docker/ssl/* /usr/share/docassemble/certs/
 sudo cp ./docassemble/Docker/rabbitmq.config /etc/rabbitmq/
 {% endhighlight %}
 
-# <a name="webapp"></a>Setting up the web application
+# <a name="webapp"></a>Configurando a Aplicação Web
+
+**TODO** acho que o user a copiar abaixo também deve ser o www-data senão dá pau na hora de editar via web interface (possivelmente)
 
 Set up and edit the **docassemble** [configuration] file, the standard location of
 which is `/usr/share/docassemble/config/config.yml`:
@@ -536,8 +612,11 @@ sudo cp ~/docassemble/docassemble_base/config.yml /usr/share/docassemble/config/
 sudo vi /usr/share/docassemble/config/config.yml
 {% endhighlight %}
 
+
 At the very least, you should edit the [`secretkey`] value and set it
 to something random and unique to your site.
+
+Usei https://randomkeygen.com/ para gerar. Usei CodeIgniter Encryption Keys - Can be used for any other 256-bit key requirement.
 
 You should set [`external hostname`] to the domain of your site (e.g.,
 `assembly.example.com`) and set [`url root`] to the URL that web
@@ -593,7 +672,7 @@ identified in `external hostname` maps to the machine running
 **docassemble**.  During the boot process, [Let's Encrypt] will be
 used to obtain certificates.
 
-# <a name="setup"></a>Setting up the SQL server
+# <a name="setup"></a>Configurando seu banco de dados SQL
 
 `docassemble` uses a SQL database.  This database can be located on
 the same server or a different server, but these instructions assume
@@ -625,7 +704,7 @@ than `/usr/share/docassemble/config/config.yml`, you can run
 `docassemble.webapp.create_tables` by passing the the configuration
 file path as the first parameter on the command line.)
 
-# <a name="setup_log"></a>Setting up the log server
+# <a name="setup_log"></a>Configurando o Servidor de Log
 
 If you are only running **docassemble** on a single machine, you do
 not need to worry about operating a central log server, and you can
@@ -1100,7 +1179,7 @@ services will be flagged as spam, you will need to spend some time
 configuring [SPF] records, [DKIM] records, [reverse DNS], and the
 like.
 
-# <a name="start"></a>Start the server and background processes
+# <a name="start"></a>Iniciando o servidor e os processos em background
 
 First, we need to disable the automatic starting and stopping of
 [NGINX] on your server.  Your server will still run [NGINX], but we
@@ -1128,6 +1207,8 @@ sudo systemctl disable exim4.service
 Make sure that [Redis] is already running.  It should have started
 running after installation.
 
+https://tecadmin.net/install-redis-ubuntu/
+
 To check [Redis], do:
 
 {% highlight bash %}
@@ -1136,6 +1217,9 @@ redis-cli ping
 
 If it does not respond with `PONG`, then there is a problem with [Redis].
 
+
+SUPERVISOR **TODO**
+===================
 Optionally, you can also control [PostgreSQL] and [Redis] with [supervisor]:
 
 {% highlight bash %}
