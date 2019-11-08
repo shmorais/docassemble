@@ -359,6 +359,8 @@ cd /usr/share/docassemble
 git clone https://github.com/letsencrypt/letsencrypt
 {% endhighlight %}
 
+Lembre-se de conferir que é o dono da pasta e dos arquivos dentro dela. Ele deve ser www-data:www-data
+
 # <a name="python"></a>Installing Python 3.6
 
 The most recent version of [Python] compatible with **docassemble** is
@@ -584,7 +586,7 @@ The `.sh` files are scripts for running background processes.
 Você pode sair do usuário `www-data` agora:
 
 {% highlight bash %}
-exit
+exitvim
 {% endhighlight %}
 
 Como superusuário, copie os arquivos abaixo para os locais de destino:
@@ -602,8 +604,6 @@ sudo cp ./docassemble/Docker/rabbitmq.config /etc/rabbitmq/
 
 # <a name="webapp"></a>Configurando a Aplicação Web
 
-**TODO** acho que o user a copiar abaixo também deve ser o www-data senão dá pau na hora de editar via web interface (possivelmente)
-
 Set up and edit the **docassemble** [configuration] file, the standard location of
 which is `/usr/share/docassemble/config/config.yml`:
 
@@ -612,11 +612,12 @@ sudo cp ~/docassemble/docassemble_base/config.yml /usr/share/docassemble/config/
 sudo vi /usr/share/docassemble/config/config.yml
 {% endhighlight %}
 
+Lembre-se que o usuário a fazer a cópia acima deve deve ser o www-data:www-data. Caso contrário, você pode ter dificuldades em acessar o arquivo de configuração a partir da interface web do **docassemble**.
 
-At the very least, you should edit the [`secretkey`] value and set it
-to something random and unique to your site.
 
-Usei https://randomkeygen.com/ para gerar. Usei CodeIgniter Encryption Keys - Can be used for any other 256-bit key requirement.
+No mínimo, você deve editar sua  [`secretkey`] e definí-la como algo único e aleatório para seu site. 
+
+Uma sugestão é usar https://randomkeygen.com/, que gera vários tamanhos e tipos de chave. Se você procurar CodeIgniter Encryption Keys verá que ela tem o mesmo tamanho da chave padrão do **docassemble** e pode ser usada para qualquer requerimento de 256-bits.
 
 You should set [`external hostname`] to the domain of your site (e.g.,
 `assembly.example.com`) and set [`url root`] to the URL that web
@@ -643,14 +644,14 @@ sudo chown -R www-data.www-data /usr/share/docassemble/local3.6 \
 sudo chmod ogu+r /usr/share/docassemble/config/config.yml
 {% endhighlight %}
 
-If you want to use HTTPS with your own certificates, set the following
-in your Configuration:
+Se você deseja usar HTTPS com seus próprios certificados, defina na 
+Configuração:
 
 {% highlight yaml %}
 use https: True
 {% endhighlight %}
 
-Copy your SSL certificates to the following locations:
+Copie seus certificados SSL para o seguinte caminho:
 
 * `/usr/share/docassemble/certs/nginx.crt` (certificate)
 * `/usr/share/docassemble/certs/nginx.key` (private key)
