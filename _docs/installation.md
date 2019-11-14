@@ -393,8 +393,7 @@ de instalar e atualizar os pacotes [Python] [through the web interface], e
 não será, portanto, necessário usar a lina de comando. Segundo, instalar
 com [pip] em um ambiente virtual assegurará que todos os pacotes [Python]
 estejam na versão mais atualizada; as versões empacotadas com as distribuições
-Linux nem sempre são as mais atuais. **TODO** Conferir se as versões mais
-atuais funcionam.
+Linux nem sempre são as mais atuais. Em todos os testes que fizemos as versões mais atualizadas dos pacotes [Python] funcionaram.
 
 Antes de instalar o [Python virtual environment], você precisa criar as
 pastas requeridas pelo [pip] para os arquivos temporários e as pastas nas quais **docassemble** e o [Python virtual environment] ficarão.
