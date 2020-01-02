@@ -1008,34 +1008,32 @@ cannot be toggled in real time within the browser).
 
 {% include side-by-side.html demo="required-code" %}
 
-## <a name="hint"></a>`hint`
+## <a name="dica"></a>`dica`
 
-You can guide users as to how they should fill out a text field by
-showing greyed-out text in a text box that disappears when the user
-starts typing in the information.  In HTML, this text is known as the
-[placeholder].  You can set this text for a text field by setting
-`hint`.  You can use [Mako] templates within `hint`s.
+Use o recurso `dica` em um campo de texto para exemplificar como
+este deve ser preenchido pelo usuário. O texto de exemplo fica 
+acinzentado e desaparece quando o usuário começa a digitar sua resposta.
+Em HTML, esse texto é conhecido como [placeholder]. Você pode usar 
+templates Mako dentro de `dica`s.
 
 {% include side-by-side.html demo="text-hint" %}
 
-The `hint` is also used to provide the default text the user sees when
-they fill out a [multiple-choice dropdown] or a [`combobox`] input
-element within a [`fields`] question.
+A dica também é usada para exemplificar o preenchimento padrão dos 
+[`campos`] de questões de [lista suspensa de múltipla escolha] ou 
+[`combobox`].
 
-## <a name="help"></a>`help`
+## <a name="ajuda"></a>`ajuda`
 
-You can provide contextual help to the user regarding the meaning of a
-field using the `help` field modifier.  The label will be green to
-indicate that it can be clicked on, and the value of `help` will
-appear on the screen when the user clicks the green text.  You can use
-[Mako] templates within `help` text.
+Use o recurso `ajuda` para explicar o significado contextual de um campo. 
+O rótulo do campo ficará verde e, se o usuário clicar em cima, o texto de  
+`ajuda` aparecerá na tela. Você pode usar templates [Mako] no texto `ajuda`.
 
 {% include side-by-side.html demo="text-help" %}
 
-## <a name="default"></a>`default`
+## <a name="padrão"></a>`padrão`
 
-You can provide a default value to a field using `default`.  You can
-use [Mako] templates in `default` text.
+Configure uma resposta padrão para um campo usando o recurso `padrão`. Use, ainda,
+templates [Mako] em textos `padrão`.
 
 {% include side-by-side.html demo="text-default" %}
 
@@ -1281,27 +1279,27 @@ the same screen that should be disabled.
 
 {% include side-by-side.html demo="disable-others-list" %}
 
-## <a name="note"></a>`note`
+## <a name="nota"></a>`nota`
 
-The value of `note` is [Markdown] text that will appear on the screen.
-This is useful for providing guidance to the user on how to enter
-information.
+A `nota` é o texto [Markdown] que aparecerá na tela.
+Use o recurso `nota` para orientar o usuário sobre como 
+responder a entrevista ou determinada questão.
 
-If the `note` is by itself as its own "field" in the list of `fields`,
-the text appears along with the other fields:
+Se a `nota` for inserida como "campo" na lista de `campos`,
+o texto aparece junto com os outros campos:
 
 {% include side-by-side.html demo="note" %}
 
-However, if the `note` is used as a field modifier, the note will
-appear to the right of field on wide screens.  On small screens, the
-note will appear after the field:
+No entanto, se a `nota` for usada como um modificador de campo, em telas 
+widescreen, ela aparerá à direita do campo. Em telas pequenas, 
+a nota aparecerá após o campo:
 
 {% include side-by-side.html demo="side-note" %}
 
-On wide screens, the location of each `note`s is based on the location
-of the field itself.  This means that if you have `note`s on two
-adjacent fields, and one of the `note`s is lengthy, the `note`s could
-overlap on the screen.  Therefore, make sure to keep your notes short.
+Em telas largas, a localização de cada `nota` é baseada na localização
+do próprio campo. Isso significa que se você tiver notas em dois
+campos adjacentes e uma das `notas` for longa, as `notas` podem se
+sobrepor na tela. Portanto, mantenha suas notas curtas.
 
 ## <a name="html"></a>`html`
 
