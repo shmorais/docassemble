@@ -1008,32 +1008,32 @@ cannot be toggled in real time within the browser).
 
 {% include side-by-side.html demo="required-code" %}
 
-## <a name="dica"></a>`dica`
+## <a name="hint"></a>`hint (dica)`
 
-Use o recurso `dica` em um campo de texto para exemplificar como
+Use o recurso `hint` em um campo de texto para exemplificar como
 este deve ser preenchido pelo usuário. O texto de exemplo fica 
 acinzentado e desaparece quando o usuário começa a digitar sua resposta.
 Em HTML, esse texto é conhecido como [placeholder]. Você pode usar 
-templates Mako dentro de `dica`s.
+templates [Mako] dentro de `hint`s.
 
 {% include side-by-side.html demo="text-hint" %}
 
 A dica também é usada para exemplificar o preenchimento padrão dos 
-[`campos`] de questões de [lista suspensa de múltipla escolha] ou 
+[`fields`] ou "campos" de questões de [multiple-choice dropdown] ou 
 [`combobox`].
 
-## <a name="ajuda"></a>`ajuda`
+## <a name="help"></a>`help (ajuda)`
 
-Use o recurso `ajuda` para explicar o significado contextual de um campo. 
-O rótulo do campo ficará verde e, se o usuário clicar em cima, o texto de  
-`ajuda` aparecerá na tela. Você pode usar templates [Mako] no texto `ajuda`.
+Use o recurso `help` para explicar o significado contextual de um campo. 
+O rótulo do campo ficará verde e, se o usuário clicar em cima, o texto do `help` aparecerá na tela.
+Você pode usar templates [Mako] no texto do `help`.
 
 {% include side-by-side.html demo="text-help" %}
 
-## <a name="padrão"></a>`padrão`
+## <a name="default"></a>`default (padrão)`
 
-Configure uma resposta padrão para um campo usando o recurso `padrão`. Use, ainda,
-templates [Mako] em textos `padrão`.
+Configure uma resposta padrão para um campo usando o recurso `default`. Use, ainda,
+templates [Mako] em textos `default`.
 
 {% include side-by-side.html demo="text-default" %}
 
