@@ -1279,27 +1279,27 @@ the same screen that should be disabled.
 
 {% include side-by-side.html demo="disable-others-list" %}
 
-## <a name="nota"></a>`nota`
+## <a name="note"></a>`note (nota)`
 
-A `nota` é o texto [Markdown] que aparecerá na tela.
-Use o recurso `nota` para orientar o usuário sobre como 
+O recurso `note` é o texto [Markdown] que aparecerá na tela.
+Use o recurso `note` para orientar o usuário sobre como 
 responder a entrevista ou determinada questão.
 
-Se a `nota` for inserida como "campo" na lista de `campos`,
+Se o recurso `note` for inserido como "campo" na lista de `fields`,
 o texto aparece junto com os outros campos:
 
 {% include side-by-side.html demo="note" %}
 
-No entanto, se a `nota` for usada como um modificador de campo, em telas 
-widescreen, ela aparerá à direita do campo. Em telas pequenas, 
-a nota aparecerá após o campo:
+No entanto, se o recurso `note` for usado como um modificador de campo, em telas 
+widescreen, ele aparerá à direita do campo. Em telas pequenas, 
+o `note` aparecerá após o campo:
 
 {% include side-by-side.html demo="side-note" %}
 
-Em telas largas, a localização de cada `nota` é baseada na localização
-do próprio campo. Isso significa que se você tiver notas em dois
-campos adjacentes e uma das `notas` for longa, as `notas` podem se
-sobrepor na tela. Portanto, mantenha suas notas curtas.
+Em telas largas, a localização de cada `note` é baseada na localização
+do próprio campo. Isso significa que se você tiver notes em dois
+campos adjacentes e um dos `note`s for longo, os `notes` podem se
+sobrepor na tela. Portanto, mantenha seus `note`s curtos.
 
 ## <a name="html"></a>`html`
 
