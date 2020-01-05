@@ -1019,7 +1019,7 @@ templates [Mako] dentro de `hint`s.
 {% include side-by-side.html demo="text-hint" %}
 
 A dica também é usada para exemplificar o preenchimento padrão dos 
-[`fields`] ou "campos" de questões de [multiple-choice dropdown] ou 
+[`fields`] de questões de [multiple-choice dropdown] ou 
 [`combobox`].
 
 ## <a name="help"></a>`help (ajuda)`
@@ -1285,21 +1285,21 @@ O recurso `note` é o texto [Markdown] que aparecerá na tela.
 Use o recurso `note` para orientar o usuário sobre como 
 responder a entrevista ou determinada questão.
 
-Se o recurso `note` for inserido como "campo" na lista de `fields`,
-o texto aparece junto com os outros campos:
+Se o recurso `note` for inserido como `fields (campo)` ele será listado
+com os outros `fields`:
 
 {% include side-by-side.html demo="note" %}
 
-No entanto, se o recurso `note` for usado como um modificador de campo, em telas 
-widescreen, ele aparerá à direita do campo. Em telas pequenas, 
+No entanto, se o recurso `note` for usado como um modificador de `fields`,
+ em telas  widescreen, ele aparerá à direita do campo. Em telas pequenas,
 o `note` aparecerá após o campo:
 
 {% include side-by-side.html demo="side-note" %}
 
 Em telas largas, a localização de cada `note` é baseada na localização
-do próprio campo. Isso significa que se você tiver notes em dois
-campos adjacentes e um dos `note`s for longo, os `notes` podem se
-sobrepor na tela. Portanto, mantenha seus `note`s curtos.
+do próprio campo. Isso significa que se você tiver `note`s em dois
+campos adjacentes e um dos `note`s for longo, os `note`s podem se
+sobrepor na tela. Portanto, escreva `note`s curtos.
 
 ## <a name="html"></a>`html`
 
